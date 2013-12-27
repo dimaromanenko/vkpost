@@ -1,7 +1,5 @@
 <?php
-/*
- https://oauth.vk.com/authorize?client_id=4081960&scope=photos,wall,groups,offline&redirect_uri=https://oauth.vk.com/blank.html&display=page&v=5.5&response_type=token
- * */
+
 class VKPoster
 {
     private $access_token = '';
@@ -137,9 +135,9 @@ class VKPoster
             $parameters['hash'] = $response->hash;
             $result = $this->excuteMethod('photos.saveWallPhoto', $parameters);
             $response = $result[0];
-            print_r('<pre>');
-            print_r($response);
-            print_r('</pre>');
+            //print_r('<pre>');
+            //print_r($response);
+            //print_r('</pre>');
             /*
              * После использования метода photos.saveWallPhoto, результат выполнения
              * далее [id] => photo1428162_317485310 можно использовать для публикации на личную стену
@@ -188,7 +186,7 @@ class VKPoster
 
         $parameters = array_merge($defaults, $data);
 
-        print_r($parameters);
+        //print_r($parameters);
 
         if (empty($parameters['message'])) {
             if (empty($parameters['attachments'])) {
