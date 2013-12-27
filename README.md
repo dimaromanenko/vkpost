@@ -1,4 +1,4 @@
-vkpost
+VKPoster
 ======
 This project for fast organization posting to vkontakte
 
